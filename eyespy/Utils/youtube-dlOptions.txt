@@ -1,0 +1,27 @@
+youtube-dl options:
+
+--no-playlist 
+
+-r, --limit-rate RATE
+Maximum download rate in bytes per second (e.g. 50K or 4.2M)
+
+-a, --batch-file FILE            
+File containing URLs to download ('-' for stdin)
+
+--write-description              
+Write video description to a .description file
+
+--write-info-json                
+Write video metadata to a .info.json file
+
+--sleep-interval SECONDS         
+Number of seconds to sleep before each download
+
+-s, --simulate
+Do not download the video and do not write anything to disk
+
+FORMAT SELECTION
+
+--recode-video FORMAT            
+Encode the video to another format if necessary (currently supported: mp4|flv|ogg|webm|mkv|avi)
+vi 
