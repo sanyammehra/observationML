@@ -5,6 +5,7 @@ import numpy as np
 import os
 import random
 import re
+import tkinter
 
 # Colors
 COLORS = {
@@ -26,12 +27,18 @@ KEYMAP = {
   'down' : [65364, 1, ord('s')],
 }
 
-SCREEN_W, SCREEN_H      = 1280, 800
-NUM_READINGS            = 4
+def get_screen_resolution():
+    root = tkinter.Tk()
+    width = root.winfo_screenwidth()
+    height = root.winfo_screenheight()
+    return height, width
+
+SCREEN_H, SCREEN_W = get_screen_resolution()
+# SCREEN_W, SCREEN_H = 1280, 800
+NUM_READINGS = 1
 
 def getXY(tracker):
-    X = 0.0
-    Y = 0.0
+    X, Y = 0.0, 0.0
     readings = 0
     while readings<NUM_READINGS:
         n = tracker.next()
@@ -183,12 +190,15 @@ def image_info(image, task_state, state):
 
   label_info = []
   if len(state.labels) > 0:
-    label_info = ['{}'.format(a) for (f, a) in state.labels.items() if state.get_image_name().split('.')[0] == f]
+    label_info = ['{}'.format(a[0]) for (f, a) in state.labels.items() if state.get_image_name().split('.')[0] == f]
   if len(label_info) == 0:
     label_info = ['None']
   for i, row in enumerate(label_info):
     cv2.putText(image, row, (5, 35 + i * 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, state.color, 1)
+  cv2.namedWindow('Video', cv2.WND_PROP_FULLSCREEN)
+  cv2.setWindowProperty('Video',cv2.WND_PROP_FULLSCREEN,cv2.WINDOW_FULLSCREEN)
   cv2.imshow('Video', image)
+  # cv2.imshow('Video', image)
   if state.look_ahead == 0:   # no lookahead
     cv2.destroyWindow('Foresight')
     cv2.destroyWindow('Hindsight')

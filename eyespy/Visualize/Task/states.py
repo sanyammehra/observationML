@@ -41,7 +41,7 @@ class State:
   def __init__(self, data_path, task_id, image_dir, frame_paths, path_to_frame, color):
 
     # set path to save the csv file
-    csv_path = os.path.join(data_path, task_id, task_id + '_frame_ground_truths.csv')
+    csv_path = os.path.join(data_path, task_id, task_id + '_user_task_record.csv')
     # create empty csv files if does not already exist
     if not os.path.isfile(csv_path):
       with open(csv_path, 'w') as f:
@@ -76,6 +76,7 @@ class State:
     if os.path.isfile(csv_path):
       with open(csv_path, mode='r') as f:
         reader = csv.reader(f)
+        # TODO: update to read in time series also
         labels = {rows[0]:rows[1] for rows in reader}
       if len(labels.items()) > 0:
         return labels

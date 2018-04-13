@@ -10,10 +10,11 @@ import eyespy.Visualize.Task.utils as utils
 
 def main(opt):
   # Instantiate tracker
-  # tracker = EyeTribe()
-  # tracker.connect()
-  # n = tracker.next()
-  # tracker.pushmode()
+  if opt.track:
+    tracker = EyeTribe()
+    tracker.connect()
+    n = tracker.next()
+    tracker.pushmode()
 
   # initialize `task_state` for all tasks
   task_state = TaskState(opt.actions, opt.data_path, opt.tasks)
@@ -35,17 +36,22 @@ def main(opt):
 
     # load image and embed info
     image_path = state.frame_paths[state.image_idx]
-    image = utils.imread(image_path, resize=2)
+    image = utils.imread(image_path, resize=1)
     utils.image_info(image, task_state, state)
 
     done = False
     count = 0
     while not done:
       count += 1
-      # state.gaze.append(utils.getXY)
-      print('{}: {}'.format(count, state.gaze))
-      state.gaze.append((random.randint(0, 100), random.randint(0, 100)))
-      key = cv2.waitKey(200)
+      # print('{}: {}'.format(count, state.gaze))
+      if opt.track:
+        state.gaze.append(utils.getXY(tracker))
+        key = cv2.waitKey(1)
+      else:
+        state.gaze.append((random.randint(0, 100), random.randint(0, 100)))
+        # TODO: Get rid of / tune the delay
+        key = cv2.waitKey(200)
+      # TODO: Get rid of / tune the count threshold
       if key != -1 or count > 100:
         done = True
         if key != -1:
@@ -62,6 +68,7 @@ if __name__ == '__main__':
   parser = argparse.ArgumentParser()
   parser.add_argument('--data_path', type=str, default='./eyespy/Data/Tasks/', help='Path to the folder with images by task (optional)')
   parser.add_argument('--tasks', nargs='+', type=int, default=['Shapes'], help='Tasks to start performing (optional)')
+  parser.add_argument('--track', action='store_true', help='Enable the gaze tracking mode; ensure H/w is setup to use this mode')
   parser.add_argument('--actions', type=str, nargs='+', help='List of actions (optional)',
                       default=['act1',
                                'act2',
