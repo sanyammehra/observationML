@@ -7,7 +7,6 @@ import random
 from eyespy.Visualize.Task.states import *
 import eyespy.Visualize.Task.utils as utils
 
-
 def main(opt):
   # Instantiate tracker
   if opt.track:
@@ -21,7 +20,6 @@ def main(opt):
   job, state = 1, None
 
   while True:
-
     # Initialising `state` for current task / video
     if job == 1:
       image_dir = os.path.join(opt.data_path, task_state.tasks[task_state.task_idx])
@@ -50,9 +48,9 @@ def main(opt):
       else:
         state.gaze.append((random.randint(0, 100), random.randint(0, 100)))
         # TODO: Get rid of / tune the delay
-        key = cv2.waitKey(200)
+        key = cv2.waitKey(10)
       # TODO: Get rid of / tune the count threshold
-      if key != -1 or count > 100:
+      if key != -1 or count > 500:
         done = True
         if key != -1:
           # record user input and implement action

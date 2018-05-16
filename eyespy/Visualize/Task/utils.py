@@ -57,6 +57,29 @@ def getXY(tracker):
     X = int(round(X/NUM_READINGS))
     Y = int(round(Y/NUM_READINGS))
     return X, Y
+    
+'''
+def getXY(tracker):
+    X, Y = 0.0, 0.0
+    readings = 0
+    while readings<NUM_READINGS:
+        n = tracker.next()
+        fix = False
+        n_list = str(n).split(';')
+        if n_list[3] == 'F':
+            fix = True
+        if fix:
+            y_pos, x_pos = n_list[7:9]
+            x_pos, y_pos = int(round(float(x_pos))), int(round(float(y_pos)))
+            x_pos = max(0, min(SCREEN_H - 1, x_pos))
+            y_pos = max(0, min(SCREEN_W - 1, y_pos))
+            X += x_pos
+            Y += y_pos
+            readings += 1
+    X = int(round(X/NUM_READINGS))
+    Y = int(round(Y/NUM_READINGS))
+    return X, Y
+'''
 
 def findpaths(path):
   """
