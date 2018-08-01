@@ -1,0 +1,162 @@
+The Eye Tribe, ApS THIRD PARTY SOFTWARE 
+
+The Eye Tribe Client and SDK are distributed with software subject to the following third party copyrights:
+1. AFNetworking:  Copyright (c) 2013-2014 and is released under the terms of the MIT License (see below).
+2. JSONCPP:  The author (Baptiste Lepilleur) explicitly disclaims copyright in all jurisdictions which recognize such a disclaimer. In such jurisdictions, this software is released into the Public Domain. In jurisdictions which do not recognize Public Domain property (e.g. Germany as of 2010), this software is Copyright (c) 2007-2010 by Baptiste Lepilleur, and is released under the terms of the MIT License (see below).
+3. OpenCV:  Copyright (C) 2000-2006, Intel Corporation, all rights reserved.
+4. Boost:  Copyright Joe Coder 2004 - 2006. Boost Software License - Version 1.0 - August 17th, 2003 (see below).
+5. 0MQ:  Multiple contributors, as follows:
+
+Corporate Contributors ======================
+Copyright (c) 2007-2013 iMatix Corporation
+Copyright (c) 2009-2011 250bpm s.r.o.
+Copyright (c) 2010-2011 Miru Limited
+Copyright (c) 2011 VMware, Inc.
+Copyright (c) 2012 Spotify AB
+
+0MQ Individual Contributors
+=======================
+AJ Lewis <aj.lewis@quantum.com>
+Alexej Lotz <alexej.lotz@arcor.de>
+Andrew Thompson <andy@fud.org.nz>
+Asko Kauppi <askok@dnainternet.net>
+Attila Mark <gougolith@gmail.com>
+Barak Amar <barak.amar@gmail.com>
+Ben Gray <ben@benjamg.com>
+Bernd Prager <bernd@prager.ws>
+Bernd Melchers <melchers@ZEDAT.FU-Berlin.DE>
+Bob Beaty <rbeaty@peak6.com>
+Brandon Carpenter <hashstat@yahoo.com>
+Brian Buchanan <bwb@holo.org>
+Brett Cameron <Brett.Cameron@hp.com>
+Burak Arslan <burak-github@arskom.com.tr>
+Carl Clemens <carlclemens1@yahoo.com>
+Chia-liang Kao <clkao@clkao.org>
+Chris Rempel <csrl@gmx.com>
+Chris Wong <chris@chriswongstudio.com>
+Christian Gudrian <christian.gudrian@fluidon.com>
+Christian Kamm <kamm@incasoftware.de>
+Chuck Remes <cremes@mac.com>
+Conrad D. Steenberg <conrad.steenberg@caltech.edu>
+Dhammika Pathirana <dhammika@gmail.com>
+Dhruva Krishnamurthy <dhruva@ymail.com>
+Dirk O. Kaar <dok@dok-net.net>
+Douglas Creager <douglas.creager@redjack.com>
+Erich Heine <sophacles@gmail.com>
+Erik Rigtorp <erik@rigtorp.com>
+Fabien Ninoles <fabien@tzone.org>
+Frank Denis <zeromq@pureftpd.org>
+George Neill <georgen@neillnet.com>
+Gerard Toonstra <gtoonstra@gmail.com>
+Ghislain Putois <ghpu@infonie.fr>
+Gonzalo Diethelm <gdiethelm@dcv.cl>
+Guido Goldstein <zmq@a-nugget.de>
+Ian Barber <ian.barber@gmail.com>
+Ilja Golshtein <ilejncs@narod.ru>
+Ivo Danihelka <ivo@danihelka.net>
+Jacob Rideout <jacob.rideout@returnpath.net>
+Joe Thornber <joe.thornber@gmail.com>
+Jon Dyte <jon@totient.co.uk>
+Kamil Shakirov <kamils80@gmail.com>
+Ken Steele <ken@tilera.com>
+Marc Rossi <mrossi19@gmail.com>
+Martin Hurton <hurtonm@gmail.com>
+Martin Lucina <martin@lucina.net>
+Martin Pales <m.pales@gmail.com>
+Martin Sustrik <sustrik@250bpm.com>
+Matus Hamorsky <mhamorsky@gmail.com>
+Max Wolf <YIDIEPXGXGPN@spammotel.com>
+McClain Looney <m@loonsoft.com>
+Michael Compton <michael.compton@littleedge.co.uk>
+Mika Fischer <mika.fischer@zoopnet.de>
+Mikael Helbo Kjaer <mhk@designtech.dk>
+Mikko Koppanen <mkoppanen@php.net>
+Min Ragan-Kelley <benjaminrk@gmail.com>
+Neale Ferguson <neale@sinenomine.net>
+Nir Soffer <nirsof@gmail.com>
+Paul Betts <paul@paulbetts.org>
+Paul Colomiets <pc@gafol.net>
+Pavel Gushcha <pavimus@gmail.com>
+Pavol Malosek <malosek@fastmq.com>
+Perry Kundert <perry@kundert.ca>
+Peter Bourgon <peter.bourgon@gmail.com>
+Philip Kovacs <phil@philkovacs.com>
+Pieter Hintjens <ph@imatix.com>
+Piotr Trojanek <piotr.trojanek@gmail.com>
+Richard Newton <richard_newton@waters.com>
+Robert G. Jakabosky <bobby@sharedrealm.com>
+Sebastian Otaegui <feniix@gmail.com>
+Stefan Radomski <radomski@tk.informatik.tu-darmstadt.de>
+Steven McCoy <steven.mccoy@miru.hk>
+Stuart Webster <sw_webster@hotmail.com>
+Tamara Kustarova <kustarova.tamara@gmail.com>
+Taras Shpot <taras.shpot@eleks.com>
+Tero Marttila <terom@fixme.fi>
+Terry Wilson <terry@logivox.net>
+Thijs Terlouw <thijsterlouw@gmail.com>
+Toralf Wittner <toralf.wittner@gmail.com>
+Tore Halvorsen <tore.halvorsen@gmail.com>
+Vitaly Mayatskikh <v.mayatskih@gmail.com>
+Lourens Naudé <lourens@methodmissing.com>
+Hardeep Singh <hshardeesi@gmail.com>
+
+Credits =======
+Aamir Mohammad <aamirjvm@gmail.com>
+Adrian von Bidder <avbidder@fortytwo.ch>
+Aleksey Yeschenko <aleksey@yeschenko.com>
+Alessio Spadaro <alessio.spadaro@finservice.com>
+Alexander Majorov <alexander.majorov@intel.com>
+Anh Vu <vietanh.vu@m4x.org>
+Bernd Schumacher <bernd.schumacher@hp.com>
+Brian Granger <ellisonbg.net@gmail.com>
+Carsten Dinkelmann <din@foobar-cpa.de>
+David Bahi <dbahi@novell.com>
+Dirk Eddelbuettel <edd@debian.org>
+Evgueny Khartchenko <Evgueny.Khartchenko@intel.com>
+Frank Vanden Berghen <frank@applied-mathematics.net>
+Ian Barber <ian.barber@gmail.com>
+John Apps <john.apps@hp.com>
+Markus Fischer <markus.fischer@hpc-solutions.com>
+Matt Muggeridge <Matt.Muggeridge@hp.com>
+Michael Santy <Michael.Santy@dynetics.com>
+Oleg Sevostyanov <oleg.sev@gmail.com>
+Paulo Henrique Silva <ph.silva@gmail.com>
+Peter Busser <busserpeter@gmail.com>
+Peter Lemenkov <lemenkov@gmail.com>
+Robert Zhang <robert@scout-trading.com>
+Toralf Wittner <toralf.wittner@gmail.com>
+Zed Shaw <zed.shaw@gmail.com>
+======================================================
+
+AFNetworking
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+======================================================
+
+JSONCPP
+The author (Baptiste Lepilleur) explicitly disclaims copyright in all jurisdictions which recognize such a disclaimer.  In such jurisdictions,  this software is released into the Public Domain.  In jurisdictions which do not recognize Public Domain property (e.g. Germany as of 2010), this software is Copyright (c) 2007-2010 by Baptiste Lepilleur, and is released under the terms of the MIT License (see below). Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+======================================================
+
+OpenCV
+Copyright (C) 2000-2006, Intel Corporation, all rights reserved. Intel License Agreement For Open Source Computer Vision Library Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistribution’s of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistribution’s in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. * The name of Intel Corporation may not be used to endorse or promote products derived from this software without specific prior written permission. This software is provided by the copyright holders and contributors “as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the Intel Corporation or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.
+
+======================================================
+
+Boost Software License - Version 1.0 - August 17th, 2003
+
+Permission is hereby granted, free of charge, to any person or organization obtaining a copy of the software and accompanying documentation covered by this license (the "Software") to use, reproduce, display, distribute, execute, and transmit the Software, and to prepare derivative works of the Software, and to permit third-parties to whom the Software is furnished to do so, all subject to the following:
+
+The copyright notices in the Software and this entire statement, including the above license grant, this restriction and the following disclaimer, must be included in all copies of the Software, in whole or in part, and all derivative works of the Software, unless such copies or derivative works are solely in the form of machine-executable object code generated by a source language processor.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+======================================================
+
+0MQ
+Copyright © multiple contributors 0MQ is provided under the terms of the GNU Lesser Public Library, Version 3, with the following “Static Linking Exception” SPECIAL EXCEPTION GRANTED BY COPYRIGHT HOLDERS As a special exception, copyright holders give you permission to link this library with independent modules to produce an executable, regardless of the license terms of these independent modules, and to copy and distribute the resulting executable under terms of your choice, provided that you also meet, for each linked independent module, the terms and conditions of the license of that module. An independent module is a module which is not derived from or based on this library. If you modify this library, you must extend this exception to your version of the library. Note: this exception relieves you of any obligations under sections 4 and 5 of this license, and section 6 of the GNU General Public License. To obtain a copy of the source code to the 0MQ software, you may download it from the 0MQ project website, located at http://zeromq.org/, or contact The Eye Tribe for a copy.

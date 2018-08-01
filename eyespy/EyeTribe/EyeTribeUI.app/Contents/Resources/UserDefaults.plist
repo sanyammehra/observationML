@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>_numberOfPoints</key>
+	<string>9</string>
+	<key>_areaSizeWidth</key>
+	<string>1440</string>
+	<key>_areaSizeHeight</key>
+	<string>900</string>
+	<key>_alignmentHorizontal</key>
+	<string>Center</string>
+	<key>_alignmentVertical</key>
+	<string>Bottom</string>
+	<key>_pointSampleTime</key>
+	<string>0.5</string>
+	<key>_postCalibrationEvaluation</key>
+	<string>1</string>
+	<key>_startInDemoMode</key>
+	<string>1</string>
+	<key>_mouseGazeRedirect</key>
+	<string>1</string>
+	<key>_mouseStabilization</key>
+	<string>1</string>
+	<key>_checkForUpdates</key>
+	<string>1</string>
+</dict>
+</plist>
