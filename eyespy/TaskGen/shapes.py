@@ -10,8 +10,8 @@ import os
 import random
 import tkinter
 
-NUM_IMAGES = 2000
-MAX_NUM_SHAPES = 30
+NUM_IMAGES = 100
+MAX_NUM_SHAPES = 20
 TASKPATH = './eyespy/Data/Tasks/Shapes/'
 GROUND_TRUTH = 'ground_truths'
 META_DATA = 'meta_data.txt'
@@ -29,8 +29,8 @@ def main(opt):
         image_name = str(idx + 1) + '.png'
         height, width = get_screen_resolution()
         image, shapes = random_image(height, width, opt.max_num_shapes)
-        if np.random.uniform(0, 1) > 0.5:
-            image = np.rot90(image, 2, (0, 1))
+        # if np.random.uniform(0, 1) > 0.5:
+        #     image = np.rot90(image, 2, (0, 1))
         metadata[idx + 1] = shapes
         # cv2.namedWindow("Image", cv2.WND_PROP_FULLSCREEN)
         # cv2.setWindowProperty("Image",cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
@@ -53,7 +53,9 @@ def random_image(height, width, max_num_shapes):
     shapes = {}
     for idx in range(num_shapes):
         shape = random.choice(SHAPES)
-        image, shape_info = draw_shape(image, shape, height, width)
+        # TODO: document width and height vs. x and y
+        # image, shape_info = draw_shape(image, shape, height, width)
+        image, shape_info = draw_shape(image, shape, width, height)
         shapes[idx] = shape_info
     shapes['num_shapes'] = num_shapes
     return image, shapes
@@ -124,7 +126,6 @@ if __name__ == '__main__':
     parser.add_argument('--task_path', type=str, default=TASKPATH, help='Path to output folder to save images(optional)')
     parser.add_argument('--num_images', default=NUM_IMAGES, type=int, help='Number of task images to be created')
     parser.add_argument('--max_num_shapes', default=MAX_NUM_SHAPES, type=int, help='Maximum number of shapes per image')
-    # parser.add_argument('--size', default=224, type=int, help='Number of task images to be created')
     args = parser.parse_args()
     # print(args)
     main(args)

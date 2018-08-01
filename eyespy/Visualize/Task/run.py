@@ -41,7 +41,6 @@ def main(opt):
     count = 0
     while not done:
       count += 1
-      # print('{}: {}'.format(count, state.gaze))
       if opt.track:
         state.gaze.append(utils.getXY(tracker))
         key = cv2.waitKey(1)

@@ -1,5 +1,5 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
-import csv
+import _pickle as pickle
 import os
 
 
@@ -34,50 +34,44 @@ class State:
     image_dir     (str) : path to folder conatining all frames of current task / video
     frame_paths   (list): list of paths to the image frames
     num_frames    (int) : number of frames in the current task / video
-    csv_path      (str) : path to the csv file for reading / writing labels
+    pickle_path   (str) : path to the pickle file for reading / writing labels
     color         (str) : name of the color to be displayed on the image frame
     look_ahead    (int) : no llokahead (0); foresight only (1); foresight and hindsight (2)
   """
   def __init__(self, data_path, task_id, image_dir, frame_paths, path_to_frame, color):
 
-    # set path to save the csv file
-    csv_path = os.path.join(data_path, task_id, task_id + '_user_task_record.csv')
-    # create empty csv files if does not already exist
-    if not os.path.isfile(csv_path):
-      with open(csv_path, 'w') as f:
-        f = open(csv_path)
-        pass
-      f.close()
+    # set path to save the pickle file
+    pickle_path = os.path.join(data_path, task_id, task_id + '_user_task_record.pkl')
 
-    # load labels from csv file
-    labels = self._load(csv_path)
-    # TODO: check data type, int or str
+    # load labels from pickle file
+    labels = self._load(pickle_path)
 
     # initialize the properties
     self.image_idx   = 0          # current image idx
-    self.labels      = labels     # (file_name, action)
+    self.labels      = labels     # (file_name, action, gaze)
     self.image_dir   = image_dir
     self.frame_paths = frame_paths
     self.num_frames  = len(frame_paths)
-    self.csv_path    = csv_path
+    self.pickle_path = pickle_path
     self.color       = color
     self.look_ahead  = 0
     self.gaze        = []
 
   @staticmethod
-  def _load(csv_path):
+  def _load(pickle_path):
     """
-    Load the csv file
+    Load the pickle file
     Args:
-      csv_path    (str) : path to csv file to be loaded
+      pickle_path    (str) : path to pickle file to be loaded
     Returns:
       labels      (dict): dict of `{file_name: action}` annotations
     """
-    if os.path.isfile(csv_path):
-      with open(csv_path, mode='r') as f:
-        reader = csv.reader(f)
-        # TODO: update to read in time series also
-        labels = {rows[0]:rows[1] for rows in reader}
+    # if os.path.isfile(pickle_path):
+    if os.path.exists(pickle_path) and os.path.getsize(pickle_path) > 0:
+      print('isfile', pickle_path)
+      with open(pickle_path, mode='rb') as f:
+        labels = pickle.load(f)
+      f.close()
       if len(labels.items()) > 0:
         return labels
       else:
@@ -116,14 +110,13 @@ class State:
 
   def save(self):
     """
-    Save the annotations as a csv file
+    Save the annotations as a pickle file
     Args:
     Returns:
     """
     if len(self.labels.items()) > 0:
       # sort labels by frame ID
-      sorted_labels = sorted(list(self.labels.items()), key=lambda x: int(x[0]))
-      with open(self.csv_path, 'w') as f:
-        for k, v in sorted_labels:
-          gaze_series = ' '.join([str(gaze_coord[0]) + ':' + str(gaze_coord[1]) for gaze_coord in v[1]])
-          f.write('{},{},{}\n'.format(k, v[0], gaze_series))
+      # sorted_labels = sorted(list(self.labels.items()), key=lambda x: int(x[0]))
+      with open(self.pickle_path, 'wb') as f:
+        pickle.dump(self.labels, f)
+      f.close()
