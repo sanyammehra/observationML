@@ -7,6 +7,11 @@ import random
 from eyespy.Visualize.Task.states import *
 import eyespy.Visualize.Task.utils as utils
 
+DATA_PATH = './eyespy/Data/Tasks/'
+TASKS = ['Shapes']
+ACTIONS = ['act1', 'act2', 'act3', 'act4', 'act5',
+          'act6', 'act7', 'act8', 'act9', 'act10']
+
 def main(opt):
   # Instantiate tracker
   if opt.track:
@@ -47,7 +52,7 @@ def main(opt):
       else:
         state.gaze.append((random.randint(0, 100), random.randint(0, 100)))
         # TODO: Get rid of / tune the delay
-        key = cv2.waitKey(10)
+        key = cv2.waitKey(50)
       # TODO: Get rid of / tune the count threshold
       if key != -1 or count > 500:
         done = True
@@ -63,19 +68,11 @@ def main(opt):
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
-  parser.add_argument('--data_path', type=str, default='./eyespy/Data/Tasks/', help='Path to the folder with images by task (optional)')
-  parser.add_argument('--tasks', nargs='+', type=int, default=['Shapes'], help='Tasks to start performing (optional)')
+  parser.add_argument('--data_path', type=str, default=DATA_PATH, help='Path to the folder with images by task (optional)')
+  parser.add_argument('--tasks', nargs='+', default=TASKS, help='Tasks to start performing (optional)')
   parser.add_argument('--track', action='store_true', help='Enable the gaze tracking mode; ensure H/w is setup to use this mode')
   parser.add_argument('--actions', type=str, nargs='+', help='List of actions (optional)',
-                      default=['act1',
-                               'act2',
-                               'act3',
-                               'act4',
-                               'act5',
-                               'act6',
-                               'act7',
-                               'act8',
-                               'act9'])
+                      default=ACTIONS)
 
   args = parser.parse_args()
 

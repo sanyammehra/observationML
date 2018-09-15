@@ -68,7 +68,6 @@ class State:
     """
     # if os.path.isfile(pickle_path):
     if os.path.exists(pickle_path) and os.path.getsize(pickle_path) > 0:
-      print('isfile', pickle_path)
       with open(pickle_path, mode='rb') as f:
         labels = pickle.load(f)
       f.close()
@@ -115,8 +114,6 @@ class State:
     Returns:
     """
     if len(self.labels.items()) > 0:
-      # sort labels by frame ID
-      # sorted_labels = sorted(list(self.labels.items()), key=lambda x: int(x[0]))
       with open(self.pickle_path, 'wb') as f:
         pickle.dump(self.labels, f)
       f.close()
